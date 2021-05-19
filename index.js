@@ -3,6 +3,7 @@ const client = new Discord.Client()
 
 const command = require('./command')
 const firstMessage = require('./first-message')
+const privateMessage = require('./private-message')
 
 client.on('ready', () => {
     console.log('The client is ready!')
@@ -43,7 +44,13 @@ client.on('ready', () => {
 /////// Auto add/update first message with reactions
     firstMessage(client, '844557319085228043', 'hello world, How are you?', ['🔥', '💣'])
     
-/////// 
+/////// Sending Private Messages by command
+    privateMessage(client, 'ping', 'Pong!')
+
+/////// Sending Private Messages automaticly to a user
+    // client.users.fetch('0123456789').then((user) => {
+    //    user.send('Hello World!')
+    // })
 
 })
 
