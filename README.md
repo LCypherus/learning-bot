@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #6 - Private Messaging Users
+## Followed video: #9 - Server info command
 
 ## Bot functions:
 - Basic Command Handler
@@ -13,3 +13,7 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Auto add/update first message with reactions
 - Sending Private Messages by command
 - Sending Private Messages automaticly to a user
+- Create a voice channel
+- Create a text channel
+- Post an embed
+- Server info command
