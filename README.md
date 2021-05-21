@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #9 - Server info command
+## Followed video: #10 - Help Command
 
 ## Bot functions:
 - Basic Command Handler
@@ -17,3 +17,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Create a text channel
 - Post an embed
 - Server info command
+- Help command

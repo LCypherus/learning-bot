@@ -2,11 +2,32 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 const command = require('./command')
+const config = require('./config.json')
 const firstMessage = require('./first-message')
 const privateMessage = require('./private-message')
 
 client.on('ready', () => {
     console.log('The client is ready!')
+
+/////// Help command
+    command(client, 'help', (message) => {
+        message.channel.send(`
+These are my supported commands:
+        
+**&help** - Displays the help menu
+**&add <num1> <num2>** - Adds two numbers
+**&sub <num1> <num2>** - Subtracts two numbers
+        `)
+    })
+
+    const { prefix } = config
+
+    client.user.setPresence({
+        activity: {
+            name: `${prefix}help for help`,
+        },
+    })
+
 
 /////// &ping
     command(client, 'ping', (message) => {
@@ -121,6 +142,12 @@ client.on('ready', () => {
         const { name, region, memberCount, owner} = guild
         // All possible properties can be found here: https://discord.js.org/#/docs/main/stable/class/Guild
         const icon = guild.iconURL()
+ 
+        let rolesA = ["845136696730452009", "845136788485439559"];
+        let membersA = guild.members.cache.filter((m) => m.roles.cache.some((r) => rolesA[1].includes(r.id)));
+        let countA = membersA.size;
+        let membersB = guild.members.cache.filter((m) => m.roles.cache.some((r) => rolesA[0].includes(r.id)));
+        let countB = membersB.size;
 
         // console.log(name, region, memberCount, icon)
         // console.log(owner.user.tag)
@@ -140,6 +167,14 @@ client.on('ready', () => {
                 {
                     name: 'Owner',
                     value: owner.user.tag,
+                },
+                {
+                    name: 'Memberscount A',
+                    value: countA,
+                },
+                {
+                    name: 'Memberscount B',
+                    value: countB,
                 },
             )
 
