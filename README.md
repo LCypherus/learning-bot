@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #10 - Help Command
+## Followed video: #11 - Role Reactions Channel
 
 ## Bot functions:
 - Basic Command Handler
@@ -18,3 +18,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Post an embed
 - Server info command
 - Help command
+- Add/remove reaction roles on first message!

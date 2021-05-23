@@ -5,9 +5,13 @@ const command = require('./command')
 const config = require('./config.json')
 const firstMessage = require('./first-message')
 const privateMessage = require('./private-message')
+const roleClaim = require('./role-claim')
 
 client.on('ready', () => {
     console.log('The client is ready!')
+
+/////// Role Claim Channel
+    roleClaim(client)
 
 /////// Help command
     command(client, 'help', (message) => {
