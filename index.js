@@ -8,11 +8,12 @@ const privateMessage = require('./private-message')
 const roleClaim = require('./role-claim')
 const poll = require('./poll')
 const welcome = require('./welcome')
+const memberCount = require('./member-count')
 
 client.on('ready', () => {
     console.log('The client is ready!')
 
-/////// Members count
+/////// 
 
 
 /////// &cc or &clearchannel
