@@ -9,9 +9,16 @@ const roleClaim = require('./role-claim')
 const poll = require('./poll')
 const welcome = require('./welcome')
 const memberCount = require('./member-count')
+const sendMessage = require('./send-message')
 
 client.on('ready', () => {
     console.log('The client is ready!')
+
+/////// Temporary Messages
+    const guild = client.guilds.cache.get('833783765699788850')
+    const channel = guild.channels.cache.get('844557319085228043')
+
+    sendMessage(channel, 'Hello World')
 
 /////// Members count
 memberCount(client)

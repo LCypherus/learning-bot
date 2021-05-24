@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #15 - Member Count Channel
+## Followed video: #16 - Temporary Messages
 
 ## Bot functions:
 - Basic Command Handler
@@ -24,3 +24,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Poll command
 - Welcome message
 - Automatic Members Count
+- Send temporary messages
