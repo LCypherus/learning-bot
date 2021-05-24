@@ -6,12 +6,17 @@ const config = require('./config.json')
 const firstMessage = require('./first-message')
 const privateMessage = require('./private-message')
 const roleClaim = require('./role-claim')
+const poll = require('./poll')
+const welcome = require('./welcome')
 
 client.on('ready', () => {
     console.log('The client is ready!')
 
+/////// Welcome Message
+    welcome(client)
+
 /////// Polls
-poll(client)
+    poll(client)
 
 /////// Ban command
     command(client, 'ban', (message) => {

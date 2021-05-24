@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #13 - Automatic Polls
+## Followed video: #14 - Welcome message
 
 ## Bot functions:
 - Basic Command Handler
@@ -22,3 +22,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Kick command
 - Ban command
 - Poll command
+- Welcome message
