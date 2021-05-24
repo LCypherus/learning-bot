@@ -8,6 +8,7 @@ const privateMessage = require('./private-message')
 const roleClaim = require('./role-claim')
 const poll = require('./poll')
 const welcome = require('./welcome')
+const welcomedb = require('./welcomedb')
 const memberCount = require('./member-count')
 const sendMessage = require('./send-message')
 const mongo = require('./mongo')
@@ -27,6 +28,9 @@ client.on('ready', async () => {
             mongoose.connection.close()
         }
     })
+
+/////// Per-Server Settings
+    welcomedb(client)
 
 /////// &cc or &clearchannel
     command(client, ['cc', 'clearchannel'], (message) => {

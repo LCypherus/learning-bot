@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #17 MongoDB Introduction
+## Followed video: #18 - Per-Server Settings
 
 ## Bot functions:
 - Basic Command Handler
@@ -26,3 +26,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Automatic Members Count
 - Send temporary messages
 - MongoDB connection !!!
+- Per server welcome message
