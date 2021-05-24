@@ -10,9 +10,23 @@ const poll = require('./poll')
 const welcome = require('./welcome')
 const memberCount = require('./member-count')
 const sendMessage = require('./send-message')
+const mongo = require('./mongo')
 
-client.on('ready', () => {
+client.on('ready', async () => {
     console.log('The client is ready!')
+
+/////// MongoDB Introduction
+    await mongo().then(mongoose => {
+        try {
+            // Try some code here
+            console.log('Connection to Mongo!')
+        } catch(e) {
+            // handle the error here
+        } finally {
+            // will always run
+            mongoose.connection.close()
+        }
+    })
 
 /////// Temporary Messages
     const guild = client.guilds.cache.get('833783765699788850')
