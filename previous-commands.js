@@ -11,6 +11,7 @@ const welcome = require('./welcome')
 const welcomedb = require('./welcomedb')
 const memberCount = require('./member-count')
 const sendMessage = require('./send-message')
+const messageCount = require('./message-counter')
 const mongo = require('./mongo')
 
 client.on('ready', async () => {
@@ -28,6 +29,9 @@ client.on('ready', async () => {
             mongoose.connection.close()
         }
     })
+
+/////// Per-User data - Message Count
+    messageCount(client)
 
 /////// Per-Server Welcome Message
     welcomedb(client)
