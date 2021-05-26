@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #26 - Ticket System
+## Followed video: #27 - Delete channels
 
 ## Bot functions:
 - Basic Command Handler
@@ -29,3 +29,5 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Per server welcome message
 - Store Per User Data
 - Advanced Command Handler
+- Ticket system (need a re-make)
+- Delete channel command
