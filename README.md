@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #27 - Delete channels
+## Followed video: #29 - Dynamic Help Menu
 
 ## Bot functions:
 - Basic Command Handler
@@ -17,7 +17,7 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Create a text channel
 - Post an embed
 - Server info command
-- Help command
+- Basic Help Command
 - Add/remove reaction roles on first message!
 - Kick command
 - Ban command
@@ -31,3 +31,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Advanced Command Handler
 - Ticket system (need a re-make)
 - Delete channel command
+- Dynamic Help Menu

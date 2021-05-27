@@ -1,5 +1,3 @@
-// Need a re-make to our current structure
-
 const channelId = '734698971175321640'
 const check = '✅'
 let registered = false
@@ -30,6 +28,7 @@ module.exports = {
   commands: ['ticket', 'support'],
   minArgs: 1,
   expectedArgs: '<message>',
+  description: 'Creates a support ticket.',
   callback: (userMessage, arguments, text, client) => {
     const { guild, member } = userMessage
 
