@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #29 - Dynamic Help Menu
+## Followed video: #30 - Advanced polling channel
 
 ## Bot functions:
 - Basic Command Handler
@@ -32,3 +32,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Ticket system (need a re-make)
 - Delete channel command
 - Dynamic Help Menu
+- Advanced poll system

@@ -14,11 +14,13 @@ const sendMessage = require('./send-message')
 const messageCount = require('./message-counter')
 const mongo = require('./mongo')
 const loadCommands = require('./commands/load-commands')
+const advancedPolls = require('./advanced-polls')
 
 client.on('ready', async () => {
     console.log('The client is ready!')
 
     loadCommands(client)
+    advancedPolls(client)
 
 /////// MongoDB Introduction
     await mongo().then(mongoose => {
