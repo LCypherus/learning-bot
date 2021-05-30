@@ -42,16 +42,12 @@ const validatePermissions = (permissions) => {
   }
 }
 
-module.exports = (client, commandOptions) => {
+const allCommands = {}
+
+module.exports = (commandOptions) => {
   let {
     commands,
-    expectedArgs = '',
-    permissionError = 'You do not have permission to run this command.',
-    minArgs = 0,
-    maxArgs = null,
     permissions = [],
-    requiredRoles = [],
-    callback,
   } = commandOptions
 
   // Ensure the command and aliases are in an array
@@ -70,18 +66,43 @@ module.exports = (client, commandOptions) => {
     validatePermissions(permissions)
   }
 
+  for (const command of commands) {
+    allCommands[command] = {
+      ...commandOptions,
+      commands,
+      permissions
+    };
+  }
+}
+
+module.exports.listen = (client) => {
   // Listen for messages
   client.on('message', (message) => {
     const { member, content, guild } = message
 
-    for (const alias of commands) {
-      const command = `${prefix}${alias.toLowerCase()}`
+    // Split on any number of spaces
+    const arguments = content.split(/[ ]+/)
 
-      if (
-        content.toLowerCase().startsWith(`${command} `) ||
-        content.toLowerCase() === command
-      ) {
-        // A command has been ran
+    // Remove the command which is the first index
+    const name = arguments.shift().toLowerCase()
+
+    if(name.startsWith(prefix)) {
+      const command = allCommands[name.replace(prefix, '')]
+      if (!command) {
+        return
+      }
+
+      const {
+        permissions,
+        permissionError = "You do not have permission to run this command.",
+        requiredRoles = [],
+        minArgs = 0,
+        maxArgs = null,
+        expectedArgs,
+        callback
+      } = command
+
+      // A command has been ran
 
         // Ensure the user has the required permissions
         for (const permission of permissions) {
@@ -101,15 +122,9 @@ module.exports = (client, commandOptions) => {
             message.reply(
               `You must have the "${requiredRole}" role to use this command.`
             )
-            return
-          }
-        }
+    }
 
-        // Split on any number of spaces
-        const arguments = content.split(/[ ]+/)
-
-        // Remove the command which is the first index
-        arguments.shift()
+    
 
         // Ensure we have the correct number of arguments
         if (

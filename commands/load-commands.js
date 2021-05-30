@@ -17,7 +17,7 @@ module.exports = (client) => {
                 const option = require(path.join(__dirname, dir, file))
                 commands.push(option)
                 if (client) {
-                    commandBase(client, option)
+                    commandBase(option)
                 }
             }
         }
