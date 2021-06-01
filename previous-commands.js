@@ -12,10 +12,14 @@ const welcomedb = require('./welcomedb')
 const memberCount = require('./member-count')
 const sendMessage = require('./send-message')
 const messageCount = require('./message-counter')
+const advancedPolls = require('./advanced-polls')
 const mongo = require('./mongo')
 
 client.on('ready', async () => {
     console.log('The client is ready!')
+
+/////// Advanced polls
+    advancedPolls(client)
 
 /////// MongoDB Introduction
     await mongo().then(mongoose => {

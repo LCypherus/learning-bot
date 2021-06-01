@@ -15,12 +15,13 @@ const messageCount = require('./message-counter')
 const mongo = require('./mongo')
 const loadCommands = require('./commands/load-commands')
 const advancedPolls = require('./advanced-polls')
+const commandBase = require('./commands/command-base')
 
 client.on('ready', async () => {
     console.log('The client is ready!')
 
+    commandBase.loadPrefixes(client)
     loadCommands(client)
-    advancedPolls(client)
 
 /////// MongoDB Introduction
     await mongo().then(mongoose => {
