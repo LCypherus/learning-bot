@@ -7,9 +7,7 @@ module.exports = (client) => {}
 
 
 module.exports.addCoins = async (guildId, userId, coins) => {
-    return await mongo().then(async (mongoose) => {
-        try {
-            console.log('Running findOneandUpdate()')
+    console.log('Running findOneandUpdate()')
 
             const result = await profileSchema.findOneAndUpdate({
                 guildId,
@@ -28,10 +26,6 @@ module.exports.addCoins = async (guildId, userId, coins) => {
             coinsCache[`${guildId}-${userId}`] = result.coins
 
             return result.coins
-        } finally {
-            mongoose.connection.close()
-        }
-    })
 }
 
 module.exports.getCoins = async (guildId, userId) => {

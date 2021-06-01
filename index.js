@@ -24,16 +24,8 @@ client.on('ready', async () => {
     loadCommands(client)
 
 /////// MongoDB Introduction
-    await mongo().then(mongoose => {
-        try {
-            // Try some code here
-            console.log('Connection to Mongo!')
-        } catch(e) {
-            // handle the error here
-        } finally {
-            // will always run
-            mongoose.connection.close()
-        }
+    await mongo().then(async (mongoose) => {
+        console.log('Connection to Mongo!')
     })
 
 /////// User Mute Command

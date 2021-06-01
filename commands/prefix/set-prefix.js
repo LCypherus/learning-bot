@@ -13,9 +13,7 @@ module.exports = {
   permissionError: 'You must be an admin to run this command.',
   permissions: 'ADMINISTRATOR',
   callback: async (message, arguments, text) => {
-    await mongo().then(async (mongoose) => {
-      try {
-        const guildId = message.guild.id
+    const guildId = message.guild.id
         const prefix = arguments[0]
 
         await commandPrefixSchema.findOneAndUpdate(
@@ -35,9 +33,5 @@ module.exports = {
 
         // Update the cache
         commandBase.updateCache(guildId, prefix)
-      } finally {
-        mongoose.connection.close()
-      }
-    })
   },
 }
