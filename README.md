@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #31 - Economy & Pay Command
+## Followed video: #34 - Warn command
 
 ## Bot functions:
 - Basic Command Handler
@@ -35,3 +35,5 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Advanced poll system
 - Economy system (&balance and &addbalance)
 - Pay command
+- Warn command
+- Per server prefix command
