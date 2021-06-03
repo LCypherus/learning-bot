@@ -156,7 +156,7 @@
     const guildId = guild[1].id
 
     const result = await commandPrefixSchema.findOne({ _id: guildId })
-    guildPrefixes[guildId] = result.prefix
+    guildPrefixes[guildId] = result ? result.prefix : globalPrefix
   }
 
   console.log(guildPrefixes)
