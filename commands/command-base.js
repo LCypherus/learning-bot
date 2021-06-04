@@ -51,6 +51,8 @@
      }
    }
  }
+
+ let recentlyRan = []
  
  module.exports = (client, commandOptions) => {
    let {
@@ -59,6 +61,7 @@
      permissionError = 'You do not have permission to run this command.',
      minArgs = 0,
      maxArgs = null,
+     cooldown = -1,
      permissions = [],
      requiredRoles = [],
      callback,
@@ -116,6 +119,15 @@
              return
            }
          }
+
+         // Ensure the user has not ran this command to frequently
+         // guildId - userId - command
+         let cooldownString = `${guild.id}-${member.id}-${commands[0]}`
+         
+         if (cooldown > 0 && recentlyRan.includes(cooldownString)) {
+            message.reply('You cannot use that command so soon, please wait.')
+            return
+         }
  
          // Split on any number of spaces
          const arguments = content.split(/[ ]+/)
@@ -132,6 +144,16 @@
              `Incorrect syntax! Use ${prefix}${alias} ${expectedArgs}`
            )
            return
+         }
+
+         if (cooldown > 0) {
+            recentlyRan.push(cooldownString)
+
+            setTimeout(() => {
+              recentlyRan = recentlyRan.filter((string) => {
+                return string !== cooldownString
+              })
+            }, 1000 * cooldown)
          }
  
          // Handle the custom command code

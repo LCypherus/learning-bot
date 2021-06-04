@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #38 - Punish logs command
+## Followed video: #39 - Command Cooldown
 
 ## Bot functions:
 - Basic Command Handler
@@ -40,3 +40,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - API Ping/Latency command
 - Moderator actions logging
 - Punish logs command (+ connected to &warn as test)
+- Command cooldown
