@@ -18,7 +18,10 @@ const mongo = require('./mongo')
 client.on('ready', async () => {
     console.log('The client is ready!')
 
-/////// Advanced polls
+/////// Moderator action logging
+    modLogs(client)
+
+    /////// Advanced polls
     advancedPolls(client)
 
 /////// MongoDB Introduction

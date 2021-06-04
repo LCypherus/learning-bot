@@ -1,5 +1,7 @@
 const mongo = require('../../mongo')
 const warnSchema = require('../../schemas/warn-schema')
+const punishmentLogSchema = require('../../schemas/punishment-log-schema')
+
 
 module.exports = {
     commands: 'warn',
@@ -41,5 +43,11 @@ module.exports = {
               upsert: true,
             }
           )
+
+          await new punishmentLogSchema({
+            guildId,
+            userId,
+            command: message.content
+          }).save()
     }
 }

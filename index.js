@@ -23,7 +23,6 @@ client.on('ready', async () => {
 
     commandBase.loadPrefixes(client)
     loadCommands(client)
-    modLogs(client)
 
 /////// MongoDB Introduction
     await mongo().then(async (mongoose) => {
