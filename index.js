@@ -16,12 +16,14 @@ const mongo = require('./mongo')
 const loadCommands = require('./commands/load-commands')
 const advancedPolls = require('./advanced-polls')
 const commandBase = require('./commands/command-base')
+const modLogs = require('./mod-logs')
 
 client.on('ready', async () => {
     console.log('The client is ready!')
 
     commandBase.loadPrefixes(client)
     loadCommands(client)
+    modLogs(client)
 
 /////// MongoDB Introduction
     await mongo().then(async (mongoose) => {

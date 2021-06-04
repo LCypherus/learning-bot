@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #35 - API Ping/Latency command
+## Followed video: #37 - Moderator action logging
 
 ## Bot functions:
 - Basic Command Handler
@@ -38,3 +38,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Warn command
 - Per server prefix command
 - API Ping/Latency command
+- Moderator actions logging
