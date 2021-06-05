@@ -2,7 +2,7 @@
 This is a tutorial bot by following the discord js tutorial of Worn Off Keys on Youtube.
 Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxfw5PH9xALe
 
-## Followed video: #40 - Channel Specific Commands
+## Followed video: #42 - Give, Remove and Has role
 
 ## Bot functions:
 - Basic Command Handler
@@ -42,3 +42,4 @@ Link: https://www.youtube.com/watch?v=gV4iltEdBs4&list=PLaxxQQak6D_fxb9_-YsmRwxf
 - Punish logs command (+ connected to &warn as test)
 - Command cooldown
 - Added requiredChannel to command base
+- giverole, removerole and hasrole command
