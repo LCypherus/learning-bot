@@ -1,28 +1,21 @@
+require('module-alias/register')
+
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
-const command = require('./command')
-const config = require('./config.json')
-const firstMessage = require('./first-message')
-const privateMessage = require('./private-message')
-const roleClaim = require('./role-claim')
-const poll = require('./poll')
-const welcome = require('./welcome')
-const welcomedb = require('./welcomedb')
-const memberCount = require('./member-count')
-const sendMessage = require('./send-message')
-const messageCount = require('./message-counter')
-const mongo = require('./mongo')
-const loadCommands = require('./commands/load-commands')
-const advancedPolls = require('./advanced-polls')
-const commandBase = require('./commands/command-base')
-const modLogs = require('./mod-logs')
+const command = require('@util/command')
+const config = require('@root/config.json')
+const mongo = require('@util/mongo')
+const loadCommands = require('@root/commands/load-commands')
+const commandBase = require('@root/commands/command-base')
+const loadFeatures = require('@root/features/load-features')
 
 client.on('ready', async () => {
     console.log('The client is ready!')
 
     commandBase.loadPrefixes(client)
     loadCommands(client)
+    loadFeatures(client)
 
 /////// MongoDB Introduction
     await mongo().then(async (mongoose) => {

@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
-const mongo = require('../../mongo')
-const punishmentLogSchema = require('../../schemas/punishment-log-schema')
+const mongo = require('@util/mongo')
+const punishmentLogSchema = require('@schemas/punishment-log-schema')
 
 module.exports = {
     commands: ['punishmentlogs', 'punishlogs', 'pl'],

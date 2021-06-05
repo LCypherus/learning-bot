@@ -5,9 +5,9 @@
  *  this file then expect the file to be slightly different than in the video.
  */
 
- const mongo = require('../mongo')
- const commandPrefixSchema = require('../schemas/command-prefix-schema')
- const { prefix: globalPrefix } = require('../config.json')
+ const mongo = require('@util/mongo')
+ const commandPrefixSchema = require('@schemas/command-prefix-schema')
+ const { prefix: globalPrefix } = require('@root/config.json')
  const guildPrefixes = {} // { 'guildId' : 'prefix' }
  
  const validatePermissions = (permissions) => {

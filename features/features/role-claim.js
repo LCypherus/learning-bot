@@ -1,6 +1,6 @@
 // Only works with custom server emoji's
 
-const firstMessage = require('./first-message')
+const firstMessage = require('@util/first-message')
 
 module.exports = (client) => {
     const channelId = '845403069709680680'

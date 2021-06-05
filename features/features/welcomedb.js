@@ -1,8 +1,8 @@
 const { Channel } = require('discord.js')
-const mongo = require('./mongo')
-const welcomeSchema = require('./schemas/welcome-schema')
+const mongo = require('@util/mongo')
+const welcomeSchema = require('@schemas/welcome-schema')
 
-const command = require('./command')
+const command = require('@util/command')
 
 module.exports = client => {
 

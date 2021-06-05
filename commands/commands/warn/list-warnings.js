@@ -1,5 +1,5 @@
-const mongo = require('../../mongo')
-const warnSchema = require('../../schemas/warn-schema')
+const mongo = require('@util/mongo')
+const warnSchema = require('@schemas/warn-schema')
 
 module.exports = {
     commands: ['listwarnings', 'lw'],
